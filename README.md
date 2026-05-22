@@ -11,9 +11,9 @@ No cloud. No subscriptions. No data leaves your laptop.
 notey is a local AI-powered search tool for Apple Notes. Instead of scrolling through dozens of notes trying to remember where you wrote something, you just ask:
 
 ```
-notey "what did I discuss with Rohan last month?"
+notey "what did I discuss with Alex last month?"
 notey "any ideas I had about onboarding?"
-notey "what questions do I still need to ask Shrreya?"
+notey "what questions do I still need to ask my manager?"
 ```
 
 It reads your Notes, understands the *meaning* of your question (not just keywords), and gives you a direct answer with citations.
@@ -41,9 +41,9 @@ Nothing is transmitted over the network. Ever.
 ### Ask a question
 
 ```bash
-notey "what should I follow up on from my last 1x1 with Rohan?"
-notey "notes about the Atlassian migration"
-notey "what was the budget breakdown Shrreya mentioned?"
+notey "what should I follow up on from my last 1x1 with Alex?"
+notey "notes about the database migration"
+notey "what was the budget breakdown my manager mentioned?"
 notey "ideas I had about scaling the pipeline"
 notey "any open questions from the Q1 planning session?"
 ```
@@ -58,19 +58,19 @@ notey status    # show how many notes are indexed and when
 ### Sample output
 
 ```
-$ notey "what questions do I still have for Shrreya?"
+$ notey "what questions do I still have for my manager?"
 
-From '1x1 Shrreya/Shrish' (Jan 7th):
+From '1x1 Sarah/Jamie' (Jan 7th):
 - Is there any allocated budget for Tech Conferences for the team?
 - Accessories — what's approved and what's not?
 - Work desk setup reimbursement details?
 
-From '1x1 Shrreya/Shrish' (Jan 12th):
+From '1x1 Sarah/Jamie' (Jan 12th):
 - Work Setup Reimbursement — items to check for.
 - Tech Conference budget — is it available?
 
 Sources:
-  • 1x1 Shrreya/Shrish  (Monday, 27 April 2026 at 5:32:27 PM)
+  • 1x1 Sarah/Jamie  (Monday, 27 April 2026 at 5:32:27 PM)
   • Scheduling 1x1s  (Friday, 16 January 2026 at 9:35:30 AM)
 ```
 
