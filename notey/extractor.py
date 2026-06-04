@@ -30,10 +30,15 @@ class _TextStripper(HTMLParser):
         return re.sub(r"\n{3,}", "\n\n", "".join(self._parts)).strip()
 
 
+_UNICODE_LINE_SEPS = re.compile(r"[  ]")
+
+
 def _strip_html(html: str) -> str:
     parser = _TextStripper()
     parser.feed(html)
-    return parser.get_text()
+    text = parser.get_text()
+    # Normalize Unicode line/paragraph separators that confuse embedding models
+    return _UNICODE_LINE_SEPS.sub("\n", text)
 
 
 def extract_notes() -> list[Note]:

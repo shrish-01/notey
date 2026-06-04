@@ -4,7 +4,7 @@ from pathlib import Path
 # Notes source
 ACCOUNT = "On My Mac"
 FOLDER = "Notes"
-EXCLUDED_TITLES = {"API Keys"}
+EXCLUDED_TITLES = {"API Keys", "AI Led Beta Testing ENV Secrets"}
 
 # Ollama
 OLLAMA_BASE_URL = os.environ.get("OLLAMA_HOST", "http://localhost:11434")

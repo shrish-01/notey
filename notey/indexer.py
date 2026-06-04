@@ -83,7 +83,12 @@ def _upsert_note(col: chromadb.Collection, note: "Note") -> None:
     # Prefix every chunk with the note title so all embeddings reference the parent note
     chunks = [f"[Note: {note.title}]\n\n{c}" for c in body_chunks]
 
-    embeddings = _embed(chunks)
+    try:
+        embeddings = _embed(chunks)
+    except Exception as e:
+        print(f"  [skip] '{note.title}' — embedding failed: {e}")
+        return
+
     ids = [f"{note.id}__chunk{i}" for i in range(len(chunks))]
     metadatas = [
         {"note_id": note.id, "note_title": note.title, "modified": note.modified, "chunk_index": i}
